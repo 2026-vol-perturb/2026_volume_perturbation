@@ -1,0 +1,8 @@
+[submodule "wenet_test"]
+	path = wenet_test
+	url = ../2026_volume_perturbation_wenet.git
+	branch = test
+[submodule "wenet_train"]
+	path = wenet_train
+	url = ../2026_volume_perturbation_wenet.git
+	branch = train

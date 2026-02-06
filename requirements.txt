@@ -1,0 +1,9 @@
+# This file does not include the requirements for WeNet, see the README!
+
+polars>=1.31
+lxml>=6.0
+pyyaml>=5.1
+
+# whisper_normalizer dependencies
+regex>=2024.11.6
+more-itertools>=10.7
