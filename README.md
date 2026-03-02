@@ -244,16 +244,18 @@ The resulting model with be in `train_outs/avg_15.pt`.
 
 The following data was used for testing in the paper:
 
-| Dataset    | Subset  | Source Subset  | Selected Recordings |
-| ---------- | ------- | -------------- | ------------------- |
-| GigaSpeech | —       | test           | all                 |
-| AMI        | headset | ASR evaluation | `*.Headset-?`       |
-|            | array   | ASR evaluation | `*.Array1-01`       |
-| DiPCo      | headset | eval           | `S??_P??`           |
-|            | array   | eval           | `S??_U??.CH7`       |
-| CHiME-6    | headset | eval           | `S??_P??`, mono mix |
-| MMCSG      | mic. 0  | eval           | all, 1st channel    |
-|            | mic. 6  | eval           | all, 7th channel    |
+| Dataset    | Subset  | Source Subset  | Selected Recordings              |
+| ---------- | ------- | -------------- | -------------------------------- |
+| GigaSpeech | —       | test           | in this repository: `test_data_lists/gigaspeech.txt` |
+| AMI        | headset | ASR evaluation | `*.Headset-?`                    |
+|            | array   | ASR evaluation | `*.Array1-01`                    |
+| DiPCo      | headset | eval           | `S??_P??`                        |
+|            | array   | eval           | `S??_U??.CH7`                    |
+| CHiME-6    | headset | eval           | `S??_P??`, mono mix              |
+| MMCSG      | mic. 0  | eval           | all, 1st channel                 |
+|            | mic. 6  | eval           | all, 7th channel                 |
+
+The selected GigaSpeech recordings have lengths betweem 100 ms and 60 s.
 
 The ASR evaluation subset of AMI is described here: https://groups.inf.ed.ac.uk/ami/corpus/datasets.shtml.
 
