@@ -27,7 +27,7 @@ Reading the article first is recommended.
 To clone the main repository including the submodules with the `train` and `test` WeNet branches, run:
 
 ```sh
-git clone --recurse-submodules https://github.com/2026-volume-perturbation/2026_volume_perturbation
+git clone --recurse-submodules https://github.com/2026-vol-perturb/2026_volume_perturbation
 ```
 
 Extract the directory from `train_data_lists.zip`.
