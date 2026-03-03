@@ -15,7 +15,7 @@ def generate_transcripts(src_dir, list_file):
     src_dir = Path(src_dir)
     list_file = Path(list_file)
 
-    df_included = pl.LazyFrame({"sid": list_file.read_text().splitlines()})
+    df_included = pl.DataFrame({"sid": list_file.read_text().splitlines()})
 
     df = pl.concat(
         pl.read_csv(path).with_columns(pl.lit(path.stem).alias("subset"))
