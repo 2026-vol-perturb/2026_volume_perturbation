@@ -168,11 +168,11 @@ Add the following files describing the corresponding `train` and `cv` sets to th
 
 *Reminder:* The `train` and `cv` sets include files as specified in `train_data_lists`.
 
-The `text` files contain transcriptions and have the format:
+The `text` files contain transcripts and have the format:
 
 ```
-id1 THIS IS A TRANSCRIPTION OF THE FIRST FILE
-id2 THIS IS A TRANSCRIPTION OF THE SECOND FILE
+id1 THIS IS A TRANSCRIPT OF THE FIRST FILE
+id2 THIS IS A TRANSCRIPT OF THE SECOND FILE
 ```
 
 The scripts in `transcription_scripts/train` output files with the same format.
@@ -226,7 +226,7 @@ Copy or symlink them into the folder.
 ##### Variant B: Finetuning (*Kaldi-like VP*, *proposed VP* and *BVP*)
 
 1. Create a new `train_outs` directory.
-2. Copy the `epoch_44.pt` and `epoch_44.yaml` from the `train_outs` directory that was generated during the prior baseline training.
+2. Copy the `epoch_44.pt` and `epoch_44.yaml` from the `train_outs` directory that was generated during the prior baseline training into the new `train_outs` directory.
 3. Run `alter_epoch.py`.
    This modifies the `epoch_44.yaml` to turn on and configure augmentation.
 4. Copy `training/train.sh` into the directory.
@@ -244,18 +244,18 @@ The resulting model with be in `train_outs/avg_15.pt`.
 
 The following data was used for testing in the paper:
 
-| Dataset    | Subset  | Source Subset  | Selected Recordings              |
-| ---------- | ------- | -------------- | -------------------------------- |
+| Dataset    | Subset  | Source Subset  | Selected Recordings                                  |
+| ---------- | ------- | -------------- | ---------------------------------------------------- |
 | GigaSpeech | —       | test           | in this repository: `test_data_lists/gigaspeech.txt` |
-| AMI        | headset | ASR evaluation | `*.Headset-?`                    |
-|            | array   | ASR evaluation | `*.Array1-01`                    |
-| DiPCo      | headset | eval           | `S??_P??`                        |
-|            | array   | eval           | `S??_U??.CH7`                    |
-| CHiME-6    | headset | eval           | `S??_P??`, mono mix              |
-| MMCSG      | mic. 0  | eval           | all, 1st channel                 |
-|            | mic. 6  | eval           | all, 7th channel                 |
+| AMI        | headset | ASR evaluation | `*.Headset-?`                                        |
+|            | array   | ASR evaluation | `*.Array1-01`                                        |
+| DiPCo      | headset | eval           | `S??_P??`                                            |
+|            | array   | eval           | `S??_U??.CH7`                                        |
+| CHiME-6    | headset | eval           | `S??_P??`, mono mix                                  |
+| MMCSG      | mic. 0  | eval           | all, 1st channel                                     |
+|            | mic. 6  | eval           | all, 7th channel                                     |
 
-The selected GigaSpeech recordings have lengths betweem 100 ms and 60 s.
+The selected GigaSpeech recordings have lengths between 100 ms and 60 s.
 
 The ASR evaluation subset of AMI is described here: https://groups.inf.ed.ac.uk/ami/corpus/datasets.shtml.
 
@@ -271,12 +271,11 @@ There are 3 separate test scripts:
 
 - `test_gigaspeech_normalized.sh` – Tests the power-normalized GigaSpeech test set (for the WER curve from the paper).
 - `test_gigaspeech.sh` – Tests the GigaSpeech test set (for the WER table from the paper).
-  - Tests volume adjustments from 
 - `test_distant.sh` – Tests the AMI, DiPCo, CHiME-6 and MMCSG datasets (for the WER table from the paper).
 
 The last two are separated since the short length of GigaSpeech samples allows greater parallelization compared to the long recordings from the other datasets.
 
-The training taskes place in the following directory structure, whose preparation will be described step-by-step:
+The training takes place in the following directory structure, whose preparation will be described step-by-step:
 
 - `<current working directory>`
     - `wenet_test` – symlink to `wenet_test`
@@ -292,7 +291,7 @@ The training taskes place in the following directory structure, whose preparatio
     - `global_cmvn` – file generated during 11800 h / 500 h baseline training
     - `train_outs` – symlink or copy of the directory from the training of the tested model
       - `avg_15.pt` – the tested model
-    - `results` – an output directory containing the resulting transcriptions
+    - `results` – an output directory containing the resulting transcripts
 
 #### Step 1
 
