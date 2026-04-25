@@ -1,6 +1,6 @@
 # Acoustic Volume Mismatch in Distant Streaming ASR: Case Study and Mitigation via Wide-Range Volume Perturbation
 
-Supplementary content for an Interspeech 2026 submission.
+Supplementary content for a conference submission.
 
 This consists of two repositories:
 - [**2026_volume_perturbation**](https://github.com/2026-volume-perturbation/2026_volume_perturbation) – The main repository.
